@@ -1,0 +1,14 @@
+<div class="card-group" >
+	<div class="card" *ngFor="let receta of recetas;let i = index">
+		<h5 class="card-header">{{receta.nombre}}</h5>
+		<img class="card-img-top" [src]="receta.img" alt="Card image cap">
+		<div class="card-body">
+			<p class="card-text" *ngFor="let ingredientes of receta.ingredientes | slice:0:3">{{ingredientes}}</p>
+			<p>...</p>
+		</div>
+			<button class="btn btn-outline-primary btn-block" (click)="verReceta(i)">Ver Mas...</button>
+		<div class="card-footer">
+			<small class="text-muted">{{receta.fecha_subida | date:'dd-MM-yyyy'}}</small>
+		</div>
+	</div>
+</div>

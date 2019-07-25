@@ -1,0 +1,10 @@
+<div class="card" style="width: 18rem;">
+	<h5 class="card-header">{{receta.nombre}}</h5>
+	<img class="card-img-top" [src]="receta.img" alt="Card image cap">
+	<div class="card-body">
+		<p class="card-text" *ngFor="let ingredientes of receta.ingredientes">{{ingredientes}}</p>
+	</div>
+	<div class="card-footer">
+		<small class="text-muted">{{receta.fecha_subida | date:'dd-MM-yyyy'}}</small>
+	</div>
+</div>
